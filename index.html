@@ -11,13 +11,19 @@
       --accent-color: #ffcc00;
       --bg-light: #f0faff;
       --font-main: 'Fredoka', sans-serif;
+      --text-color: #333;
+    }
+
+    html {
+      font-size: 16px; /* Default for desktop */
     }
 
     body {
       margin: 0;
       font-family: var(--font-main);
       background-color: var(--bg-light);
-      color: #333;
+      color: var(--text-color);
+      line-height: 1.6;
     }
 
     header {
@@ -29,13 +35,13 @@
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 2rem; /* 32px */
       margin: 0;
     }
 
     header p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0 0;
+      font-size: 1.125rem; /* 18px */
+      margin-top: 0.5rem;
     }
 
     section {
@@ -46,8 +52,18 @@
 
     h2 {
       color: var(--primary-color);
-      font-size: 2rem;
+      font-size: 1.75rem; /* 28px */
       margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.5rem; /* 24px */
+      color: #ff7a59;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1rem; /* 16px desktop, larger on mobile */
     }
 
     .program, .benefit {
@@ -56,12 +72,6 @@
       padding: 1.5rem;
       margin-bottom: 1.5rem;
       box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-    }
-
-    .program h3 {
-      color: #ff7a59;
-      font-size: 1.5rem;
-      margin-top: 0;
     }
 
     .team-member {
@@ -85,6 +95,7 @@
     .team-member h4 {
       margin: 0 0 0.5rem;
       color: #ff7a59;
+      font-size: 1.25rem;
     }
 
     .contact {
@@ -107,7 +118,29 @@
       margin: 2rem 0;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
+      html {
+        font-size: 18px; /* Increase base font for tablets and mobile */
+      }
+
+      header h1 {
+        font-size: 2.25rem; /* ~36px */
+      }
+
+      h2 {
+        font-size: 2rem; /* ~32px */
+      }
+
+      h3 {
+        font-size: 1.5rem; /* ~27px */
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: 20px; /* Even larger for small screens */
+      }
+
       .team-member {
         flex-direction: column;
         text-align: center;
@@ -170,14 +203,14 @@
 <section id="team">
   <h2>Meet the Team</h2>
   <div class="team-member">
-    <img src="coach-guhen.png" alt="Coach Guhen">
+    <img src="coach-guhen.jpg" alt="Coach Guhen">
     <div>
       <h4>Coach Guhen</h4>
       <p>Autism Fitness Pro Certification (Level 1)<br>9 years in coaching and education</p>
     </div>
   </div>
   <div class="team-member">
-    <img src="coach-hafiz.png" alt="Coach Hafiz">
+    <img src="coach-hafiz.jpg" alt="Coach Hafiz">
     <div>
       <h4>Coach Hafiz</h4>
       <p>IAAF Level II Sprints & Hurdles<br>15 years in coaching and education</p>
